@@ -8,14 +8,17 @@
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<link REL="stylesheet" href="styles/default.css" type="text/css">
-		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
 		{END rtlCSS}
-		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
 		{END styleCSSFiles}
 	</head>
 
 	<body class="{$stylename} function-list" {$bodyattrs}>
-	{BEGIN body}{$header}
+	{BEGIN body}
+		{$header}
 		<style>
 			{$containerCss}
 		</style>
@@ -23,13 +26,16 @@
 
 
 
-{BEGIN container_hdr}<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
 
-{BEGIN logo_block}<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
 {END logo_block}
 
 
-{BEGIN collapse_block}<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
 	<span class="sr-only">Toggle navigation</span>	
 	<span class="icon-bar"></span>					
 </button>												
@@ -47,7 +53,8 @@
 
 
 {BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
-{BEGIN menu_block}{$menu main horizontal}
+{BEGIN menu_block}
+{$menu main horizontal}
 
 {END menu_block}
 
@@ -55,39 +62,48 @@
 
 
 
-{BEGIN container_more}<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
 
-{BEGIN more_list}<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
 	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<span class="glyphicon glyphicon-cog"></span>
 		<span class="caret"></span>
 	</button>
 	<ul class="dropdown-menu">
-				{BEGIN editselected_link}<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >Edit selected</a></li>
+				{BEGIN editselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >Edit selected</a></li>
 		{END editselected_link}
 
-				{BEGIN exportselected_link}<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >Export selected</a></li>
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >Export selected</a></li>
 		{END exportselected_link}
 		
-				{BEGIN deleteselected_link}<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Borrar articulos seleccionados</a></li>
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Borrar articulos seleccionados</a></li>
 		{END deleteselected_link}
 		
 				<li role="separator" class="divider"></li>	
 
-				{BEGIN asearch_link}<li><a href="requisiciones_search.php" {$advsearchlink_attrs}>Búsqueda avanzada</a></li>
+				{BEGIN asearch_link}
+		<li><a href="requisiciones_search.php" {$advsearchlink_attrs}>Búsqueda avanzada</a></li>
 		{END asearch_link}
 
-				{BEGIN searchPanelTopButtons}<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
 		{END searchPanelTopButtons}	
 		
 				
 				<li role="separator" class="divider"></li>	
 		
 				
-				{BEGIN export_link}<li><a target="_blank" href="requisiciones_export.php"  {$exportlink_attrs}>Exportar resultados</a></li>
+				{BEGIN export_link}
+		<li><a target="_blank" href="requisiciones_export.php"  {$exportlink_attrs}>Exportar resultados</a></li>
 		{END export_link}
 
-				{BEGIN import_link}<li><a href="requisiciones_import.php?{$crosstable_attrs}"  {$importlink_attrs}>Importar</a></li>
+				{BEGIN import_link}
+		<li><a href="requisiciones_import.php?{$crosstable_attrs}"  {$importlink_attrs}>Importar</a></li>
 		{END import_link}
 
 				
@@ -109,19 +125,24 @@
 
 
 
-{BEGIN container_more_1}<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
 
-{BEGIN searchform_block}<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
 
  <div  class="input-group">
-{BEGIN searchform_text}<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
 {END searchform_text}
 	<span class="input-group-btn">
-	{BEGIN searchform_showall}<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="Mostrar todo">
 			<span class="glyphicon glyphicon-remove"></span>
 		</button>
 	{END searchform_showall}
-	{BEGIN searchform_search}<button {$searchbutton_attrs} class="btn btn-primary" >
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
 		<span class="glyphicon glyphicon-search"></span>
 	</button>
 	{END searchform_search}
@@ -147,19 +168,25 @@
 			<div class="bs-topmiddle">
 				
 
-{BEGIN container_breadcrumbs}<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
+{BEGIN container_breadcrumbs}
+<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
 
 
 
 
-{BEGIN container_bc}<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
 
-{BEGIN breadcrumbs}<ol class="breadcrumb">
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
 <li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
-{BEGIN crumb}<li class="{$crumb_item_class}">
-{BEGIN crumb_title_link}<a {$crumb_attrs}>{$crumb_title}</a>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
 {END crumb_title_link}
-{BEGIN crumb_title_span}<span>{$crumb_title}</span>
+{BEGIN crumb_title_span}
+	<span>{$crumb_title}</span>
 {END crumb_title_span}	
 	{$crumb_dropdown}
   </li>
@@ -187,9 +214,11 @@
 			<div class="bs-left" {$blockattr_left}>
 				
 
-{BEGIN container_left}<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class="    "> 
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class="    "> 
 
-{BEGIN searchPanel}<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
 	<!-- Search panel content -->
 	
 	<div class="panel-heading">
@@ -204,8 +233,7 @@
 		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<span class="glyphicon glyphicon glyphicon-option-vertical"> 
-			</SPAN>
-                      </button>
+			</button>
 			<ul class="dropdown-menu dropdown-left">
 				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>Mostrar opciones</a></li>
 				<li role="separator" class="divider"></li>
@@ -222,7 +250,8 @@
 
 
 		
-		{BEGIN searchCtrlBlock}<div class="srchPanelRow form-group" {$filterRow_attrs}>
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
 			<label>{$fLabel}</label>	{$delCtrlButt}
 				<span class="rnr-searchtype">{$searchtype}</span>
 				<span class="rnr-searchcontrol">{$searchcontrol}</span>
@@ -243,7 +272,8 @@
 {END searchPanel}
 
 
-{BEGIN filterPanel}<div {$filterpanel_hiddenattr} data-pageid="{$pageid}" data-brick="filterpanel">
+{BEGIN filterPanel}
+<div {$filterpanel_hiddenattr} data-pageid="{$pageid}" data-brick="filterpanel">
 <button  type="button" class="bs-hidden-xs bs-navcontrolled btn btn-info bs-togglebutton bottom-margin collapsed" data-runner-toggle="collapse" data-target=".filterPanelContainer">	
 	<span class="glyphicon glyphicon-filter"><span> Filter	
 </button>
@@ -259,7 +289,8 @@
 	
 	
 		
-{BEGIN filter_control_cantidadSolicitada}<div class="panel panel-info filter-field filter-cantidadSolicitada-container">
+{BEGIN filter_control_cantidadSolicitada}
+	<div class="panel panel-info filter-field filter-cantidadSolicitada-container">
 		<div class="panel-heading filter-expander">
 			<span class="filter-indicator glyphicon 
 							glyphicon-triangle-top
@@ -267,20 +298,24 @@
 			</span>
 						<input type="checkbox" name="selectAll" {$selectAll_attrs_cantidadSolicitada} class="filter-selectAll-cantidadSolicitada"/>
 			{$label requisiciones cantidadSolicitada}
-			{BEGIN clearLink_cantidadSolicitada}<a href="#" class="filter-clear filter-clear-cantidadSolicitada">borrar</a>
+			{BEGIN clearLink_cantidadSolicitada}
+			<a href="#" class="filter-clear filter-clear-cantidadSolicitada">borrar</a>
 			{END clearLink_cantidadSolicitada}
 		</div>
 		<ul class="list-group">
-		{BEGIN filterCtrlBlock_cantidadSolicitada}<li class="list-group-item filter-values filter-values-cantidadSolicitada {$collapsedClass_cantidadSolicitada} {$visibilityClass_cantidadSolicitada}">
+		{BEGIN filterCtrlBlock_cantidadSolicitada}
+		<li class="list-group-item filter-values filter-values-cantidadSolicitada {$collapsedClass_cantidadSolicitada} {$visibilityClass_cantidadSolicitada}">
 			{$cantidadSolicitada_filter}	
 		</li>
 		{END filterCtrlBlock_cantidadSolicitada}
-				{BEGIN filter_button_showmore_cantidadSolicitada}<li class="list-group-item filter-show-more {$collapsedClass_cantidadSolicitada} {$showMoreBtnClass_cantidadSolicitada}">
+				{BEGIN filter_button_showmore_cantidadSolicitada}
+		<li class="list-group-item filter-show-more {$collapsedClass_cantidadSolicitada} {$showMoreBtnClass_cantidadSolicitada}">
 			<a class="filter-show-more-link filterShowMore_cantidadSolicitada" href="#">Show {$numberOfItemsToSHow_cantidadSolicitada} more</a>
 		</li>
 		{END filter_button_showmore_cantidadSolicitada}
 		
-				{BEGIN filter_button_apply_cantidadSolicitada}<li class="list-group-item filter-field-btn {$collapsedClass_cantidadSolicitada}">
+				{BEGIN filter_button_apply_cantidadSolicitada}
+		<li class="list-group-item filter-field-btn {$collapsedClass_cantidadSolicitada}">
 			<a href="#" class="rnr-button filter-btn-apply filter-apply-cantidadSolicitada" {$filterbutton_attrs_cantidadSolicitada}>Aplicar</a>
 		</li>
 		{END filter_button_apply_cantidadSolicitada}
@@ -302,14 +337,17 @@
 			<div class="bs-center bs-screenwidth bs-minwidth">
 				
 
-{BEGIN container_messagerow}<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="row rnr-rowcontainer ">
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="row rnr-rowcontainer ">
 
 
 
 
-{BEGIN container_message}<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
 
-{BEGIN message_block}<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
 {END message_block}
 
 
@@ -326,29 +364,38 @@
 
 
 
-{BEGIN container_gridcontrols}<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class="row rnr-rowcontainer bs-navcontrolled bs-hidden-xs">
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class="row rnr-rowcontainer bs-navcontrolled bs-hidden-xs">
 
 
 
 
-{BEGIN container_add_delete}<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
 
-{BEGIN newrecord_controls_block}{BEGIN add_link}<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>Añadir nuevo</a>
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>Añadir nuevo</a>
 	{END add_link}
 
-		{BEGIN inlineadd_link}<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>Añadir nuevo</button>
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>Añadir nuevo</button>
 	{END inlineadd_link}
 
 {END newrecord_controls_block}
 
 
-{BEGIN record_controls_block}<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
-		{BEGIN deleteselected_link}<button type="button" class="btn btn-default bs-invisible-button" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Borrar artículos seleccionados</button>
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default bs-invisible-button" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Borrar artículos seleccionados</button>
 	{END deleteselected_link}
 
-		{BEGIN saveall_link}<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>Guardar todo</button>
+		{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>Guardar todo</button>
 	{END saveall_link}
-	{BEGIN cancelall_link}<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>Cancelar</button>
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>Cancelar</button>
 	{END cancelall_link}
 </span>
 
@@ -366,23 +413,24 @@
 
 
 
-{BEGIN container_gridinfo}<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin pull-right text-right col-md-6 "> 
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin pull-right text-right col-md-6 "> 
 
-{BEGIN details_found}<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
 	Displaying <span>{$firstrecord}</span> - <span>{$lastrecord}</span> of <span>{$records_found}</span>
 	<span>
-	{BEGIN recordspp_block}{$recsPerPage}
+	{BEGIN recordspp_block}
+			{$recsPerPage}
 	{END recordspp_block}
 	</span>
 </span>
 {END details_found}
 
 
-{BEGIN print_friendly}<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
-	<form action="fpdf.php" >
-    <input type="submit" value="buscar" />
-  </form>                      
-<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Página para imprimir">
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="Página para imprimir">
 		<span class="glyphicon glyphicon-print" ></span>
 		<span class="caret"></span>
     </button>
@@ -391,7 +439,8 @@
 			<div class="container-fluid" id="print_friendly_scope{$id}">
 				<div class="row">
 					<div class="col-md-4">Scope:</div>
-										{BEGIN print_friendly_all}<div class="col-md-8">
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
 						<label for="printAll{$id}">
 							<input type="radio" id="printAll{$id}" data-href="requisiciones_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
 							Print all pages
@@ -453,14 +502,17 @@
 
 
 
-{BEGIN container_center}<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
 
 
 
 
-{BEGIN container_grid}<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
 
-{BEGIN grid_block}<style>
+{BEGIN grid_block}
+	<style>
 	.bs-gridcell[data-field=area]:before {
 		content: "{$label requisiciones area}";
 	}
@@ -497,18 +549,24 @@
 </style>
 <table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
 	<thead>
-										{BEGIN grid_header}<tr class="rnr-toprow {$gridHeader_class}" >
-									{BEGIN record_header}{BEGIN listIcons_column}<th iEditCont="all">&nbsp;</th>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
 									{END listIcons_column}	
 
-																		{BEGIN checkbox_column}<TH>
-                                  <input type="checkbox" {$checkboxheader_attrs}>
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
 									</th>
 									{END checkbox_column}
 
 																		
-									{BEGIN codigoInsumo_fieldheadercolumn}<th class="rnr-gridfieldlabel {$codigoInsumo_class}">
-									{BEGIN codigoInsumo_fieldheader}<span {$codigoInsumo_orderlinkattrs}>
+									{BEGIN codigoInsumo_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$codigoInsumo_class}">
+									{BEGIN codigoInsumo_fieldheader}
+																				<span {$codigoInsumo_orderlinkattrs}>
 											{$label requisiciones codigoInsumo}
 										</span>
 									{END codigoInsumo_fieldheader}
@@ -518,8 +576,10 @@
 									
 									
 									
-									{BEGIN area_fieldheadercolumn}<th class="rnr-gridfieldlabel {$area_class}">
-									{BEGIN area_fieldheader}<span {$area_orderlinkattrs}>
+									{BEGIN area_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$area_class}">
+									{BEGIN area_fieldheader}
+																				<span {$area_orderlinkattrs}>
 											{$label requisiciones area}
 										</span>
 									{END area_fieldheader}
@@ -529,8 +589,10 @@
 									
 									
 									
-									{BEGIN jefatura_fieldheadercolumn}<th class="rnr-gridfieldlabel {$jefatura_class}">
-									{BEGIN jefatura_fieldheader}<span {$jefatura_orderlinkattrs}>
+									{BEGIN jefatura_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$jefatura_class}">
+									{BEGIN jefatura_fieldheader}
+																				<span {$jefatura_orderlinkattrs}>
 											{$label requisiciones jefatura}
 										</span>
 									{END jefatura_fieldheader}
@@ -540,8 +602,10 @@
 									
 									
 									
-									{BEGIN correlativo_fieldheadercolumn}<th class="rnr-gridfieldlabel {$correlativo_class}">
-									{BEGIN correlativo_fieldheader}<span {$correlativo_orderlinkattrs}>
+									{BEGIN correlativo_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$correlativo_class}">
+									{BEGIN correlativo_fieldheader}
+																				<span {$correlativo_orderlinkattrs}>
 											{$label requisiciones correlativo}
 										</span>
 									{END correlativo_fieldheader}
@@ -551,8 +615,10 @@
 									
 									
 									
-									{BEGIN gestionSiges_fieldheadercolumn}<th class="rnr-gridfieldlabel {$gestionSiges_class}">
-									{BEGIN gestionSiges_fieldheader}<span {$gestionSiges_orderlinkattrs}>
+									{BEGIN gestionSiges_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$gestionSiges_class}">
+									{BEGIN gestionSiges_fieldheader}
+																				<span {$gestionSiges_orderlinkattrs}>
 											{$label requisiciones gestionSiges}
 										</span>
 									{END gestionSiges_fieldheader}
@@ -562,8 +628,10 @@
 									
 									
 									
-									{BEGIN fechaRequisicion_fieldheadercolumn}<th class="rnr-gridfieldlabel {$fechaRequisicion_class}">
-									{BEGIN fechaRequisicion_fieldheader}<span {$fechaRequisicion_orderlinkattrs}>
+									{BEGIN fechaRequisicion_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$fechaRequisicion_class}">
+									{BEGIN fechaRequisicion_fieldheader}
+																				<span {$fechaRequisicion_orderlinkattrs}>
 											{$label requisiciones fechaRequisicion}
 										</span>
 									{END fechaRequisicion_fieldheader}
@@ -573,8 +641,10 @@
 									
 									
 									
-									{BEGIN cantidadSolicitada_fieldheadercolumn}<th class="rnr-gridfieldlabel {$cantidadSolicitada_class}">
-									{BEGIN cantidadSolicitada_fieldheader}<span {$cantidadSolicitada_orderlinkattrs}>
+									{BEGIN cantidadSolicitada_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$cantidadSolicitada_class}">
+									{BEGIN cantidadSolicitada_fieldheader}
+																				<span {$cantidadSolicitada_orderlinkattrs}>
 											{$label requisiciones cantidadSolicitada}
 										</span>
 									{END cantidadSolicitada_fieldheader}
@@ -584,8 +654,10 @@
 									
 									
 									
-									{BEGIN unidadDeMedida_fieldheadercolumn}<th class="rnr-gridfieldlabel {$unidadDeMedida_class}">
-									{BEGIN unidadDeMedida_fieldheader}<span {$unidadDeMedida_orderlinkattrs}>
+									{BEGIN unidadDeMedida_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$unidadDeMedida_class}">
+									{BEGIN unidadDeMedida_fieldheader}
+																				<span {$unidadDeMedida_orderlinkattrs}>
 											{$label requisiciones unidadDeMedida}
 										</span>
 									{END unidadDeMedida_fieldheader}
@@ -595,8 +667,10 @@
 									
 									
 									
-									{BEGIN descripcion_fieldheadercolumn}<th class="rnr-gridfieldlabel {$descripcion_class}">
-									{BEGIN descripcion_fieldheader}<span {$descripcion_orderlinkattrs}>
+									{BEGIN descripcion_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$descripcion_class}">
+									{BEGIN descripcion_fieldheader}
+																				<span {$descripcion_orderlinkattrs}>
 											{$label requisiciones descripcion}
 										</span>
 									{END descripcion_fieldheader}
@@ -606,8 +680,10 @@
 									
 									
 									
-									{BEGIN codigoPresentacion_fieldheadercolumn}<th class="rnr-gridfieldlabel {$codigoPresentacion_class}">
-									{BEGIN codigoPresentacion_fieldheader}<span {$codigoPresentacion_orderlinkattrs}>
+									{BEGIN codigoPresentacion_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$codigoPresentacion_class}">
+									{BEGIN codigoPresentacion_fieldheader}
+																				<span {$codigoPresentacion_orderlinkattrs}>
 											{$label requisiciones codigoPresentacion}
 										</span>
 									{END codigoPresentacion_fieldheader}
@@ -617,8 +693,10 @@
 									
 									
 									
-									{BEGIN existenciasAlmacen_fieldheadercolumn}<th class="rnr-gridfieldlabel {$existenciasAlmacen_class}">
-									{BEGIN existenciasAlmacen_fieldheader}<span {$existenciasAlmacen_orderlinkattrs}>
+									{BEGIN existenciasAlmacen_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$existenciasAlmacen_class}">
+									{BEGIN existenciasAlmacen_fieldheader}
+																				<span {$existenciasAlmacen_orderlinkattrs}>
 											{$label requisiciones existenciasAlmacen}
 										</span>
 									{END existenciasAlmacen_fieldheader}
@@ -628,7 +706,8 @@
 									
 									
 									
-									{BEGIN endrecordheader_block}<th class="rnr-cs">&nbsp;</th>
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
 									
 									{END endrecordheader_block}
 									
@@ -639,13 +718,20 @@
 
 	</thead>
 	<tbody>	
-		{BEGIN grid_row}<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
-	{BEGIN grid_record}{BEGIN listIcons_column}<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
-		{BEGIN edit_column}{BEGIN edit_link}<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="Editar"></a>
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="Editar"></a>
 	{END edit_link}
 	{END edit_column}
 
-		{BEGIN inlineedit_column}{BEGIN inlineedit_link}<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="Editar"></a>
+		{BEGIN inlineedit_column}
+	{BEGIN inlineedit_link}
+			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="Editar"></a>
 	{END inlineedit_link}
 	{END inlineedit_column}
 
@@ -653,80 +739,94 @@
 		</td>	
 	{END listIcons_column}	
 
-		{BEGIN checkbox_column}<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
-	{BEGIN checkbox}<input type="checkbox" {$checkbox_attrs}>
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
 	{END checkbox}
 	</td>
 	{END checkbox_column}
 
 	
 
-	{BEGIN codigoInsumo_fieldcolumn}<td class="bs-gridcell {$codigoInsumo_class}"  data-field=codigoInsumo {$rowstyle} {$recordattrs}>
+	{BEGIN codigoInsumo_fieldcolumn}
+	<td class="bs-gridcell {$codigoInsumo_class}"  data-field=codigoInsumo {$rowstyle} {$recordattrs}>
 		{$codigoInsumo_value}
 	</td>
 {END codigoInsumo_fieldcolumn}
 
 
-	{BEGIN area_fieldcolumn}<td class="bs-gridcell {$area_class}"  data-field=area {$rowstyle} {$recordattrs}>
+	{BEGIN area_fieldcolumn}
+	<td class="bs-gridcell {$area_class}"  data-field=area {$rowstyle} {$recordattrs}>
 		{$area_value}
 	</td>
 {END area_fieldcolumn}
 
 
-	{BEGIN jefatura_fieldcolumn}<td class="bs-gridcell {$jefatura_class}"  data-field=jefatura {$rowstyle} {$recordattrs}>
+	{BEGIN jefatura_fieldcolumn}
+	<td class="bs-gridcell {$jefatura_class}"  data-field=jefatura {$rowstyle} {$recordattrs}>
 		{$jefatura_value}
 	</td>
 {END jefatura_fieldcolumn}
 
 
-	{BEGIN correlativo_fieldcolumn}<td class="bs-gridcell {$correlativo_class}"  data-field=correlativo {$rowstyle} {$recordattrs}>
+	{BEGIN correlativo_fieldcolumn}
+	<td class="bs-gridcell {$correlativo_class}"  data-field=correlativo {$rowstyle} {$recordattrs}>
 		{$correlativo_value}
 	</td>
 {END correlativo_fieldcolumn}
 
 
-	{BEGIN gestionSiges_fieldcolumn}<td class="bs-gridcell {$gestionSiges_class}"  data-field=gestionSiges {$rowstyle} {$recordattrs}>
+	{BEGIN gestionSiges_fieldcolumn}
+	<td class="bs-gridcell {$gestionSiges_class}"  data-field=gestionSiges {$rowstyle} {$recordattrs}>
 		{$gestionSiges_value}
 	</td>
 {END gestionSiges_fieldcolumn}
 
 
-	{BEGIN fechaRequisicion_fieldcolumn}<td class="bs-gridcell {$fechaRequisicion_class}"  data-field=fechaRequisicion {$rowstyle} {$recordattrs}>
+	{BEGIN fechaRequisicion_fieldcolumn}
+	<td class="bs-gridcell {$fechaRequisicion_class}"  data-field=fechaRequisicion {$rowstyle} {$recordattrs}>
 		{$fechaRequisicion_value}
 	</td>
 {END fechaRequisicion_fieldcolumn}
 
 
-	{BEGIN cantidadSolicitada_fieldcolumn}<td class="bs-gridcell {$cantidadSolicitada_class}"  data-field=cantidadSolicitada {$rowstyle} {$recordattrs}>
+	{BEGIN cantidadSolicitada_fieldcolumn}
+	<td class="bs-gridcell {$cantidadSolicitada_class}"  data-field=cantidadSolicitada {$rowstyle} {$recordattrs}>
 		{$cantidadSolicitada_value}
 	</td>
 {END cantidadSolicitada_fieldcolumn}
 
 
-	{BEGIN unidadDeMedida_fieldcolumn}<td class="bs-gridcell {$unidadDeMedida_class}"  data-field=unidadDeMedida {$rowstyle} {$recordattrs}>
+	{BEGIN unidadDeMedida_fieldcolumn}
+	<td class="bs-gridcell {$unidadDeMedida_class}"  data-field=unidadDeMedida {$rowstyle} {$recordattrs}>
 		{$unidadDeMedida_value}
 	</td>
 {END unidadDeMedida_fieldcolumn}
 
 
-	{BEGIN descripcion_fieldcolumn}<td class="bs-gridcell {$descripcion_class}"  data-field=descripcion {$rowstyle} {$recordattrs}>
+	{BEGIN descripcion_fieldcolumn}
+	<td class="bs-gridcell {$descripcion_class}"  data-field=descripcion {$rowstyle} {$recordattrs}>
 		{$descripcion_value}
 	</td>
 {END descripcion_fieldcolumn}
 
 
-	{BEGIN codigoPresentacion_fieldcolumn}<td class="bs-gridcell {$codigoPresentacion_class}"  data-field=codigoPresentacion {$rowstyle} {$recordattrs}>
+	{BEGIN codigoPresentacion_fieldcolumn}
+	<td class="bs-gridcell {$codigoPresentacion_class}"  data-field=codigoPresentacion {$rowstyle} {$recordattrs}>
 		{$codigoPresentacion_value}
 	</td>
 {END codigoPresentacion_fieldcolumn}
 
 
-	{BEGIN existenciasAlmacen_fieldcolumn}<td class="bs-gridcell {$existenciasAlmacen_class}"  data-field=existenciasAlmacen {$rowstyle} {$recordattrs}>
+	{BEGIN existenciasAlmacen_fieldcolumn}
+	<td class="bs-gridcell {$existenciasAlmacen_class}"  data-field=existenciasAlmacen {$rowstyle} {$recordattrs}>
 		{$existenciasAlmacen_value}
 	</td>
 {END existenciasAlmacen_fieldcolumn}
 
-	{BEGIN endrecord_block}<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
 	{END endrecord_block}
 									
 	{END grid_record}
@@ -758,9 +858,11 @@
 
 
 
-{BEGIN container_pagination}<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
 
-{BEGIN pagination_block}<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
 {$pagination}
 </div>
 {END pagination_block}
